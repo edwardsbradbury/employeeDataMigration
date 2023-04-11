@@ -36,3 +36,6 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+### Database credentials shouldn't be stored in git
+#login.properties
