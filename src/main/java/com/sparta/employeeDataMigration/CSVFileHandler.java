@@ -8,11 +8,15 @@ import java.util.List;
 import java.util.Scanner;
 
 public class CSVFileHandler {
-  public static List<String> readFile() throws FileNotFoundException {
+
+
+
+  public static List<String> readFile(String filePath) throws FileNotFoundException {
 
 
     List<String> result = new ArrayList<>();
-    try (Scanner scanner = new Scanner(new File("src/main/resources/EmployeeRecords.csv"));){
+
+    try (Scanner scanner = new Scanner(new File(filePath));){
       while (scanner.hasNextLine()) {
         String line = scanner.nextLine();
         result.add(line);
@@ -21,11 +25,9 @@ public class CSVFileHandler {
       scanner.close();
       return result;
 
-    } catch (FileNotFoundException e){
-      throw new RuntimeException(e);
+    } catch (IOException e){
+      throw new FileNotFoundException(e.toString());
     }
-
-
 
   }
 
