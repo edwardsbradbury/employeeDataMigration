@@ -17,13 +17,8 @@ public class CSVHandlerTests {
   @Test
   @DisplayName("Test that the readFile method returns a List of string if the CSV file is found")
   void testReadFileReturnsListOfStrings() {
-    try {
-      assertThat(CSVFileHandler.readFile(), is(instanceOf(List.class)));
-      assertThat((List<?>) CSVFileHandler.readFile(), everyItem(is(instanceOf(String.class))));
-    } catch (FileNotFoundException e) {
-      throw new RuntimeException(e);
-    }
-
+    assertThat(CSVFileHandler.readFile(), is(instanceOf(List.class)));
+    assertThat((List<?>) CSVFileHandler.readFile(), everyItem(is(instanceOf(String.class))));
   }
 
   @Test

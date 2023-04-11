@@ -1,16 +1,12 @@
 package com.sparta.employeeDataMigration;
 
-import java.io.FileNotFoundException;
-
-public class App
+public class App 
 {
-    public static void main( String[] args ) throws FileNotFoundException {
+    public static void main( String[] args )
+    {
 
-        //testing csv reader, just remove if u want
+        //testing
 
-        for (String string : CSVFileHandler.readFile()){
-
-            System.out.println(string);
-        }
+        for (String string : CSVFil)
     }
 }
