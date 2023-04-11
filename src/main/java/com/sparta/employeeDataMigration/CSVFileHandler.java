@@ -12,7 +12,7 @@ public class CSVFileHandler {
 
 
     List<String> result = new ArrayList<>();
-    try (Scanner scanner = new Scanner(new File("employeeDataMigration/src/main/resources/EmployeeRecords.csv"));){
+    try (Scanner scanner = new Scanner(new File("src/main/resources/EmployeeRecords.csv"));){
       while (scanner.hasNextLine()) {
         String line = scanner.nextLine();
         result.add(line);
@@ -25,7 +25,10 @@ public class CSVFileHandler {
       e.printStackTrace();
     }
 
-    return result;
+    throw new FileNotFoundException();
+
+
+
 
   }
 
