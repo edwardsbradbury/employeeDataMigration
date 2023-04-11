@@ -1,9 +1,12 @@
 package com.sparta.employeeDataMigration;
 
-public class App 
+import com.sparta.employeeDataMigration.userInterface.UserInterface;
+
+public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+
+        UserInterface ui = new UserInterface();
     }
 }
