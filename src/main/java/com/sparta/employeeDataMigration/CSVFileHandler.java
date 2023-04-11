@@ -21,11 +21,11 @@ public class CSVFileHandler {
       scanner.close();
       return result;
 
-    } catch (IOException e){
-      e.printStackTrace();
+    } catch (FileNotFoundException e){
+      throw new RuntimeException(e);
     }
 
-    return result;
+
 
   }
 
