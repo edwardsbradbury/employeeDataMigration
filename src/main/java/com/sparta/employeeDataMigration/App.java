@@ -1,6 +1,10 @@
 package com.sparta.employeeDataMigration;
 
+
 import java.io.FileNotFoundException;
+
+import com.sparta.employeeDataMigration.userInterface.UserInterface;
+
 
 public class App
 {
@@ -17,5 +21,7 @@ public class App
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
+
+        UserInterface ui = new UserInterface();
     }
 }
