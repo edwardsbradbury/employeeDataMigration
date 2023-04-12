@@ -1,11 +1,16 @@
 package com.sparta.employeeDataMigration.userInterface;
 
+import com.sparta.employeeDataMigration.dataAccessObject.EmployeeDAO;
+import com.sparta.employeeDataMigration.dataAccessObject.EmployeeService;
+
 import java.util.Scanner;
 
 public class UserInterface implements UserInteractions {
 
 private Scanner scan;
 private String options;
+
+private EmployeeService employeeService = new EmployeeService(new EmployeeDAO());
 
   public UserInterface() {
 
@@ -19,7 +24,7 @@ private String options;
 
       switch (selectedOption) {
         case 1:
-          System.out.println("Listing clean, unique records");
+          System.out.println(employeeService.displayAllEmployees());
           break;
         case 2:
           System.out.println("Listing duplicate records");
