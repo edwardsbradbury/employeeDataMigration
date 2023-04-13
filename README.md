@@ -2,7 +2,7 @@
 
 A Sparta Academy (Java Automation Engineers stream) project by Christian Bitca, Ed Bradbury, Marcella Chessa, Rafael Lopes, Liam Richardson, Sahan Seneviratne, and Nicholas Thom.
 
-Built using Java JDK 17, with JUnit 5 unit tests and Log4J2 logging.
+Built using Java JDK 17, JDBC and MySQL, with JUnit 5 unit tests and Log4J2 logging.
 ___________________________________________________________________________________________________________________________________________
 ## Project Requirements
 
