@@ -44,10 +44,10 @@ public class EmployeeService {
   }
 
 //  Method to return a string telling the number of clean records created and number of duplicates
-//  public String displayResultOfReadCSV() {
-//    return "Clean records: " + getNumCleanRecords() + "\n"
-//        + "Duplicate records: " + getNumDuplicateRecords() + "\n";
-//  }
+  public String displayResultOfReadCSV() {
+    return "Clean records: " + getNumCleanRecords() + "\n"
+        + "Duplicate records: " + getNumDuplicateRecords() + "\n";
+  }
 
 
   public String getTotalNumEmployees() {
@@ -55,30 +55,30 @@ public class EmployeeService {
   }
 
 //  INCOMPLETE method to return a string saying how many records are clean
-//  public String getNumCleanRecords() {
-//      int numRecs = employeeDAO.getAll()
-//        .stream()
-//        .filter(employee -> )
-//        .size();
-//      return "Number of clean, unique records: " + numRecs;
-//  }
+  public String getNumCleanRecords() {
+      int numRecs = employeeDAO.getAll()
+        .stream()
+        .filter(employee -> )
+        .size();
+      return "Number of clean, unique records: " + numRecs;
+  }
 
 //  INCOMPLETE method to return a string saying how many records are duplicates
-//  public String getNumDuplicateRecords() {
-//      int numRecs = employeeDAO.getAll()
-//        .stream()
-//        .filter(employee -> )
-//        .size();
-//      return "Number of duplicate records: " + numRecs;
-//  }
+  public String getNumDuplicateRecords() {
+      int numRecs = employeeDAO.getAll()
+        .stream()
+        .filter(employee -> )
+        .size();
+      return "Number of duplicate records: " + numRecs;
+  }
 
 //  INCOMPLETE method to return a string saying how many records are corrupted
-//  public String getNumCorruptRecords() {
-//    int numRecs =employeeDAO.getAll()
-//        .stream()
-//        .filter(employee -> )
-//        .size();
-//    return "Number of corrupted records: " + numRecs;
-//  }
+  public String getNumCorruptRecords() {
+    int numRecs =employeeDAO.getAll()
+        .stream()
+        .filter(employee -> )
+        .size();
+    return "Number of corrupted records: " + numRecs;
+  }
 
 }

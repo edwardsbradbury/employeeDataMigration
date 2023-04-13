@@ -14,7 +14,7 @@ private EmployeeService employeeService = new EmployeeService(new EmployeeDAO())
 
   public UserInterface() {
 
-//    System.out.println(employeeService.displayResultOfReadCSV());
+    System.out.println(employeeService.displayResultOfReadCSV());
 
     this.scan = new Scanner(System.in);
     this.options = "\nEnter number and return to choose an option:\n1) List clean, unique records\n2) List duplicate records\n3) List records with missing or invalid fields\n4) Quit";
@@ -29,10 +29,10 @@ private EmployeeService employeeService = new EmployeeService(new EmployeeDAO())
           System.out.println(employeeService.displayAllEmployees());
           break;
         case 2:
-          System.out.println("Listing duplicate records");
+          System.out.println(employeeService.getNumCleanRecords());
           break;
         case 3:
-          System.out.println("List records with missing or invalid fields");
+          System.out.println(employeeService.getNumCorruptRecords());
           break;
       }
 
@@ -65,20 +65,5 @@ private EmployeeService employeeService = new EmployeeService(new EmployeeDAO())
     } while (!optionValid);
 
     return option;
-  }
-
-  @Override
-  public void listCleanRecords() {
-
-  }
-
-  @Override
-  public void listDuplicateRecords() {
-
-  }
-
-  @Override
-  public void listCorruptedRecords() {
-
   }
 }
