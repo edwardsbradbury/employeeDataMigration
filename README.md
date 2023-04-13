@@ -1,6 +1,6 @@
 # Employee CSV Data Migration Project
 
-A Sparta Academy (Java Automation Engineers stream) project by Christian Bitca, Ed Bradbury, Marcella Chessa, Rafael Lopes, Liam Richardson, Sahan Seneviratne, and Nicholas Thom.
+A Sparta Academy (Java Automation Engineers stream) project by Cristian Bitca, Ed Bradbury, Marcella Chessa, Rafael Lopes, Liam Richardson, Sahan Seneviratne, and Nicholas Thom.
 
 Built using Java JDK 17, JDBC and MySQL, with JUnit 5 unit tests and Log4J2 logging.
 ___________________________________________________________________________________________________________________________________________
