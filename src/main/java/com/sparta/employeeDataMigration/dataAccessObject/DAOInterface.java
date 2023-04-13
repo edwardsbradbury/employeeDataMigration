@@ -4,6 +4,6 @@ import java.util.List;
 
 public interface DAOInterface<T> {
 
-  int insert (T newRow);
+  boolean insert (T newRow);
   List<T> getAll();
 }

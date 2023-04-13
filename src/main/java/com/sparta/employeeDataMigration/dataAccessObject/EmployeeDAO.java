@@ -19,10 +19,11 @@ public class EmployeeDAO implements DAOInterface<Employee> {
 
   List<Employee> allEmployees;
 
+  // Returns true or false depending on whether or not employee successfully added
   @Override
-  public int insert(Employee newRow) {
+  public boolean insert(Employee newRow) {
     if (newRow == null) {
-      return 0;
+      return false;
     }
     int result = 0;
     String insertStatement = "INSERT INTO employees (employeeID, prefix, firstName, middleInitial, lastName, gender, email, birthDate, joinDate, salary) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -43,7 +44,7 @@ public class EmployeeDAO implements DAOInterface<Employee> {
     } catch (Exception e) {
       logger.log(Level.ERROR, "Something went wrong in EmployeeDAO.insert() method", e);
     }
-    return result;
+    return result > 0;
   }
 
   @Override

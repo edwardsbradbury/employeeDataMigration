@@ -28,6 +28,8 @@ public class EmployeeService {
     return appendThis;
   }
 
+  // Gets all employees from the database and returns  a string representation of all the records
+  // for human readable output
   public String displayAllEmployees() {
     List<Employee> allEmployees = employeeDAO.getAll();
     if (allEmployees == null || allEmployees.size() < 1) {
@@ -41,34 +43,42 @@ public class EmployeeService {
     }
   }
 
+//  Method to return a string telling the number of clean records created and number of duplicates
 //  public String displayResultOfReadCSV() {
 //    return "Clean records: " + getNumCleanRecords() + "\n"
 //        + "Duplicate records: " + getNumDuplicateRecords() + "\n";
 //  }
 
-  public int getTotalNumEmployees() {
-    return employeeDAO.getAll().size();
+
+  public String getTotalNumEmployees() {
+    return "Total number of employee records: " + employeeDAO.getAll().size();
   }
 
-//  public int getNumCleanRecords() {
-//    return employeeDAO.getAll()
+//  INCOMPLETE method to return a string saying how many records are clean
+//  public String getNumCleanRecords() {
+//      int numRecs = employeeDAO.getAll()
 //        .stream()
 //        .filter(employee -> )
 //        .size();
-//  }
-//
-//  public int getNumDuplicateRecords() {
-//    return employeeDAO.getAll()
-//        .stream()
-//        .filter(employee -> )
-//        .size();
+//      return "Number of clean, unique records: " + numRecs;
 //  }
 
-//  public int getNumCorruptRecords() {
-//    return employeeDAO.getAll()
+//  INCOMPLETE method to return a string saying how many records are duplicates
+//  public String getNumDuplicateRecords() {
+//      int numRecs = employeeDAO.getAll()
 //        .stream()
 //        .filter(employee -> )
 //        .size();
+//      return "Number of duplicate records: " + numRecs;
+//  }
+
+//  INCOMPLETE method to return a string saying how many records are corrupted
+//  public String getNumCorruptRecords() {
+//    int numRecs =employeeDAO.getAll()
+//        .stream()
+//        .filter(employee -> )
+//        .size();
+//    return "Number of corrupted records: " + numRecs;
 //  }
 
 }

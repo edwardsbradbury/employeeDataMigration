@@ -14,6 +14,8 @@ private EmployeeService employeeService = new EmployeeService(new EmployeeDAO())
 
   public UserInterface() {
 
+//    System.out.println(employeeService.displayResultOfReadCSV());
+
     this.scan = new Scanner(System.in);
     this.options = "\nEnter number and return to choose an option:\n1) List clean, unique records\n2) List duplicate records\n3) List records with missing or invalid fields\n4) Quit";
     int selectedOption = 0;
