@@ -1,32 +1,28 @@
 package com.sparta.employeeDataMigration;
-import java.io.File;
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.ArrayList;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.List;
-import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class CSVFileHandler {
-  public static List<String> readFile() throws FileNotFoundException {
+    public static List<String> readFile(String filePath) throws FileNotFoundException {
 
+        List<String> result = null; // collect all lines into a list
+        try {
+            result = Files.lines(Paths.get(filePath))
+                    .skip(1) // skip the header line
+                    .collect(Collectors.toList());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
-    List<String> result = new ArrayList<>();
-    try (Scanner scanner = new Scanner(new File("employeeDataMigration/src/main/resources/EmployeeRecords.csv"));){
-      while (scanner.hasNextLine()) {
-        String line = scanner.nextLine();
-        result.add(line);
-      }
+        return result.stream()
+                .toList();
 
-      scanner.close();
-      return result;
-
-    } catch (IOException e){
-      e.printStackTrace();
     }
-
-    return result;
-
-  }
 
 
 }
