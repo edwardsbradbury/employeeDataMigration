@@ -3,7 +3,7 @@
 A Sparta Academy (Java Automation Engineers stream) project by Christian Bitca, Ed Bradbury, Marcella Chessa, Rafael Lopes, Liam Richardson, Sahan Seneviratne, and Nicholas Thom.
 
 Built using Java JDK 17, with JUnit 5 unit tests and Log4J2 logging.
-
+___________________________________________________________________________________________________________________________________________
 ## Project Requirements
 
 ### Overall Goals
@@ -31,6 +31,8 @@ Built using Java JDK 17, with JUnit 5 unit tests and Log4J2 logging.
 - Create a data access object (DAO pattern) to persist the data to the database.
 - Persist employee records and write code to retrieve individual records from the database.
 
+___________________________________________________________________________________________________________________________________________
+
 ## Project Structure
 
 ### Packages
@@ -46,7 +48,7 @@ Parent package with general files.
 **Employee.java:** Models an Employee, with private properties as per the columns in the CSV and getters/setters.
 
 **EmployeeParser.java:** Take the String array output by CSVFileHandler and parses into Employee object instances.
-
+_______________________________________________________________
 
 #### .dataAccessObject
 
@@ -59,6 +61,8 @@ Parent package with general files.
 **EmployeeService.java:** Provides an instance of EmployeeDAO and methods for formatting information to be displayed to users.
 
 Contains classes used to model database structure, connect to the database and handle CRUD operations
+
+_________________________________________________________________
 
 #### .userInterface
 
